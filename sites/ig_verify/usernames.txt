@@ -1,2 +1,0 @@
-Account: ghh
-Pass: 55555

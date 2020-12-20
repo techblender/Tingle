@@ -1,2 +1,0 @@
-Account: Sign In
-Pass: but

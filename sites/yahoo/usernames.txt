@@ -1,2 +1,0 @@
-Account: Yah
-Pass: ooooo

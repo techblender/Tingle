@@ -15,7 +15,6 @@ command -v curl > /dev/null 2>&1 || { echo >&2 "I require curl but it's not inst
 banner() {
 chmod +x ngrok
 chmod +x tingle.sh
-
 clear
 printf "\e[1;31m _______ _             _     \e[0m\n"
 printf "\e[1;31m|__   __(_)           | |     \e[0m\n"
